@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>kwish hd today</title>
+</head>
+
+<body>
+    <!-- navigation -->
+
+    <div class="fixed-top">
+        <nav id="home" class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Movies Hub</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#movies">Movies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#series">Series</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#shows">TV Shows</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#animes">Animes</a>
+                        </li>
+                    </ul>
+                    <form id="form" class="d-flex" role="search">
+                        <input id="input" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- slideshow -->
+
+    <div class="slideshow">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/second.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/image.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/third.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+
+    <div class="content">
+
+        <div id="search-container" class="search-container">
+            <h3 class="title">Search Results</h3>
+            <ul id="search-list">
+                <li>Nothing found yet</li>
+            </ul>
+        </div>
+
+        <div class="content-container">
+            <h3 class="title">Movies</h3>
+            <div id="movies" class="list-container"></div>
+            <h3 class="title">Series</h3>
+            <div id="series" class="list-container"></div>
+            <h3 class="title">TV Shows</h3>
+            <div id="shows" class="list-container"></div>
+            <h3 class="title">Animes</h3>
+            <div id="animes" class="list-container"></div>
+        </div>
+    </div>
+
+    
+
+    <!-- <div class="card" style="width: 18rem;">
+        <img src="${result.Poster}" class="card-img-top" alt="${result.Title}">
+        <div class="card-body">
+            <h5 class="card-title">${result.Title}</h5>
+            <p class="card-text">Year - ${result.Year}</p>
+            <a href="#" class="btn btn-primary">See more</a>
+        </div>
+    </div> -->
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div id="loading-container" class="loading-container">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+            <div class="modal-header">
+              <h5 id="modal-title" class="modal-title" id="exampleModalLabel">Movie One</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card" style="width: 18rem;">
+                    <img id="modal-image" src="" class="card-img-top" alt="movie one">
+                    <div class="card-body">
+                        <h5 id="modal-title-text" class="card-title">Title: </h5>
+                        <p id="modal-year" class="card-text">Year: </p>
+                        <p id="modal-rated" class="card-text">Rated: </p>
+                        <p id="modal-genre" class="card-text">Genre: </p>
+                        <p id="modal-director" class="card-text">Director: </p>
+                        <p id="modal-plot" class="card-text">Plot: </p>
+                        <p id="modal-language" class="card-text">Language: </p>
+                        <p id="modal-country" class="card-text">Country: </p>
+                        <p id="modal-rating" class="card-text">Rating: </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
