@@ -89,7 +89,7 @@ const showMovieHandler = async (movieId) => {
 
     loadingContainer.style.display = 'inline-block';
 
-    const response = await fetch(`http://www.omdbapi.com/?i=${movieId}&apikey=5a25029d`);
+    const response = await fetch(`https://omdbapi.com/?i=${movieId}&apikey=5a25029d`);
     const data = await response.json();
 
     headerTitle.innerHTML = data.Title;
